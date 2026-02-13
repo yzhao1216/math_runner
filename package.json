@@ -1,0 +1,23 @@
+{
+  "name": "math-runner",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npx cap sync",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0-beta.13"
+  },
+  "overrides": {
+    "vite": "^8.0.0-beta.13"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^8.0.2",
+    "@capacitor/core": "^8.0.2",
+    "@capacitor/ios": "^8.0.2",
+    "three": "^0.182.0"
+  }
+}

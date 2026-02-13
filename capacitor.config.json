@@ -1,0 +1,5 @@
+{
+  "appId": "com.yourname.mathrunner",
+  "appName": "MathRunner",
+  "webDir": "dist"
+}

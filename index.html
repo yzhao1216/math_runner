@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- CRITICAL MOBILE SETTINGS -->
+    <!-- viewport-fit=cover: Extends the game behind the notch/home bar -->
+    <!-- user-scalable=no: Prevents accidental zooming while playing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    
+    <!-- iOS Web App Settings (Optional, helps if added to Home Screen) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>Math Runner</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- UI LAYER -->
+    <div id="ui-layer">
+        
+        <!-- HEADS UP DISPLAY (Minimal Version) -->
+        <div id="game-hud">
+          <div id="level-indicator-wrapper"><span id="level-indicator">LEVEL 1</span></div>
+          <button id="pause-btn" aria-label="Pause">⏸</button>
+        </div>
+
+        <!-- PAUSE OVERLAY -->
+        <div id="pause-overlay">
+          <h2>PAUSED</h2>
+          <button id="resume-btn">Resume</button>
+        </div>
+
+        <!-- VICTORY OVERLAY (hidden by default) -->
+        <div id="victory-overlay">
+            <h2>VICTORY!</h2>
+        </div>
+
+        <!-- START SCREEN OVERLAY -->
+        <div id="start-screen">
+            <div class="title-container">
+                <h1>MATH RUNNER</h1>
+            </div>
+
+            <div class="tutorial-container">
+                <div class="hand-icon">
+                    <!-- Simple CSS Hand Graphic -->
+                    👋
+                </div>
+                <p>Swipe to Control</p>
+            </div>
+
+            <button id="start-btn">TAP TO START</button>
+        </div>
+
+        <!-- GAME OVER SCREEN -->
+        <div id="game-over">
+          <div class="game-over-content">
+            <h2>GAME OVER</h2>
+            <p>Your score went below zero!</p>
+            <div class="game-over-buttons">
+              <button id="try-again-btn">Try Again</button>
+              <button id="watch-ad-btn">Watch Ad to Resume</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- LEVEL COMPLETE SCREEN -->
+        <div id="level-complete">
+            
+          <!-- Confetti Container -->
+          <div class="confetti-container">
+              <div class="confetti"></div><div class="confetti"></div>
+              <div class="confetti"></div><div class="confetti"></div>
+              <div class="confetti"></div><div class="confetti"></div>
+              <div class="confetti"></div><div class="confetti"></div>
+              <div class="confetti"></div><div class="confetti"></div>
+          </div>
+
+          <div class="victory-content">
+              <h1>VICTORY!</h1>
+              <div class="score-summary">Level 1 Complete</div>
+              <button id="next-level-btn">NEXT LEVEL</button>
+          </div>
+        </div>
+        
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
